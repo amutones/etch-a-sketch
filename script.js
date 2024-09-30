@@ -18,8 +18,11 @@ function createGrid(gridNum) {
         square.style.height = length;
         square.style.width = length;
         const randomColor = Math.floor(Math.random()*16777215).toString(16);
+        let startingOpacity = 0.0;
         square.addEventListener("mouseover", event => {
             event.target.style.backgroundColor = "#" + randomColor;
+            startingOpacity += 0.1;
+            event.target.style.opacity = startingOpacity.toString();
         });
         gridContainer.appendChild(square);
         body.appendChild(gridContainer);
