@@ -30,11 +30,22 @@ function createGrid(gridNum) {
 const button = document.querySelector("button");
 
 button.addEventListener("click", event => {
-    removeGrid();
-    let size = Number(prompt("How many squares per side?"));
-
     
-    createGrid(size);
+    let size = "";
+    do {
+        size = Number(prompt("How many squares per side?\n(Note that larger numbers may not load.)"));
+        if (size === 0) {
+            return;
+        }
+        if (Number.isNaN(size) || size < 0) {
+            alert("Please enter a number greater than 0.");
+        }
+    } while (Number.isNaN(size) || size <= 0);
+    
+    if (size > 0) {
+        removeGrid();
+        createGrid(size);
+    }   
 });
 
 function removeGrid() {
