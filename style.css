@@ -3,17 +3,22 @@ body {
     margin:0;
     padding:0;
     display:flex;
-    justify-content: center;
+    flex-direction: column;
+    /* justify-content: flex-start; */
     align-items: center;
     height: 100vh;
+}
+
+#resetGrid {
+    padding: 10px;
 }
 
 #container {
     
     display:flex;
-    height: 224px;
-    width:224px;
-    
+    height: 960px;
+    width:960px;
+    align-self: center;
     flex-wrap: wrap;
     /* justify-content: center;
     align-items: center; */
@@ -23,7 +28,7 @@ body {
     border: 2px solid;
     
     border-color:black;
-    height:10px;
-    width: 10px;
-    
+    height:34.4px;
+    width:34.4px;
+     
 }
