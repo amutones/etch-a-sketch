@@ -10,5 +10,11 @@ console.log(totalGrids);
 for (let index = 0; index < totalGrids; index++) {
     const square = document.createElement("div");
     square.classList.add("square");
+    square.addEventListener("mouseover", event => {
+        event.target.style.backgroundColor = "blue";
+    });
     gridContainer.appendChild(square);
+    
 }
+
+
